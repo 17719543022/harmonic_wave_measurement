@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs</name>
+	<name>harmonic_wave_measurement</name>
 	<comment></comment>
 	<projects>
 	</projects>

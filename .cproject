@@ -104,7 +104,7 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.com.ti.ccstudio.buildDefinitions.MSP432.ProjectType.1930994723" name="MSP432" projectType="com.ti.ccstudio.buildDefinitions.MSP432.ProjectType"/>
+		<project id="harmonic_wave_measurement.com.ti.ccstudio.buildDefinitions.MSP432.ProjectType.1930994723" name="MSP432" projectType="com.ti.ccstudio.buildDefinitions.MSP432.ProjectType"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration"/>
 </cproject>

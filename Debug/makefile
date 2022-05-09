@@ -132,34 +132,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.out \
+harmonic_wave_measurement.out \
 
 EXE_OUTPUTS__QUOTED += \
-"cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.out" \
+"harmonic_wave_measurement.out" \
 
 BIN_OUTPUTS += \
-cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.hex \
+harmonic_wave_measurement.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.hex" \
+"harmonic_wave_measurement.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.out"
+	@$(MAKE) --no-print-directory -Onone "harmonic_wave_measurement.out"
 
 # Tool invocations
-cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+harmonic_wave_measurement.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=DeviceFamily_MSP432E4 --define=__MSP432E401Y__ -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.map" --stack_size=512 -i"C:/ti/simplelink_msp432e4_sdk_4_20_00_12/source" -i"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs_linkInfo.xml" --rom_model -o "cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=DeviceFamily_MSP432E4 --define=__MSP432E401Y__ -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"harmonic_wave_measurement.map" --stack_size=512 -i"C:/ti/simplelink_msp432e4_sdk_4_20_00_12/source" -i"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="harmonic_wave_measurement_linkInfo.xml" --rom_model -o "harmonic_wave_measurement.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.hex: $(EXE_OUTPUTS)
+harmonic_wave_measurement.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: Arm Hex Utility'
-	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armhex" --diag_wrap=off -o "cmsis_msp432e4_dsp_example_MSP_EXP432E401Y_nortos_ccs.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armhex" --diag_wrap=off -o "harmonic_wave_measurement.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 
