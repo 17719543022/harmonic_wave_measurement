@@ -50,16 +50,24 @@
 									<listOptionValue builtIn="false" value="${COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR}/kernel/nortos"/>
 									<listOptionValue builtIn="false" value="${COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR}/kernel/nortos/posix"/>
 									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+									<listOptionValue builtIn="false" value="${COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR}/source/third_party/CMSIS/DSP_Lib/Include"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.DEFINE.1434220726" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.DEFINE" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="${COM_TI_SIMPLELINK_MSP432E4_SDK_SYMBOLS}"/>
 									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="ARM_MATH_CM4"/>
+									<listOptionValue builtIn="false" value="__FPU_PRESENT=1"/>
+									<listOptionValue builtIn="false" value="DeviceFamily_MSP432E4"/>
+									<listOptionValue builtIn="false" value="__MSP432E401Y__"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.ADVICE__POWER.1437119719" name="Enable checking of ULP power rules (--advice:power)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.ADVICE__POWER" useByScannerDiscovery="false" value="none" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.SILICON_VERSION.869088238" name="Target processor version (--silicon_version, -mv)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.SILICON_VERSION" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.SILICON_VERSION.7M4" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.CODE_STATE.1607692235" name="Designate code state, 16-bit (thumb) or 32-bit (--code_state)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.CODE_STATE" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.CODE_STATE.16" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.GEN_FUNC_SUBSECTIONS.2046341908" name="Place each function in a separate subsection (--gen_func_subsections, -ms)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.GEN_FUNC_SUBSECTIONS" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.FLOAT_SUPPORT.1815373925" name="Specify floating point support (--float_support)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.FLOAT_SUPPORT" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.FLOAT_SUPPORT.FPv4SPD16" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.OTHER_FLAGS.585677775" name="Other flags" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compilerID.OTHER_FLAGS" valueType="stringList">
+									<listOptionValue builtIn="false" value=""/>
+								</option>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compiler.inputType__C_SRCS.538999259" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compiler.inputType__CPP_SRCS.111955122" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compiler.inputType__ASM_SRCS.1322651996" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.compiler.inputType__ASM_SRCS"/>
@@ -81,6 +89,7 @@
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.LIBRARY.899675329" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.LIBRARY" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="${COM_TI_SIMPLELINK_MSP432E4_SDK_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR}/source/third_party/CMSIS/DSP_Lib/lib/ccs/m4f/arm_cortexM4lf_math.a"/>
 									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_LIBRARIES}"/>
 									<listOptionValue builtIn="false" value="ti/display/lib/display.aem4f"/>
 									<listOptionValue builtIn="false" value="ti/grlib/lib/ccs/m4f/grlib.a"/>

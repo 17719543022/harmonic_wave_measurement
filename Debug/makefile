@@ -13,8 +13,11 @@ ORDERED_OBJS += \
 "./gpiointerrupt.obj" \
 "./syscfg/ti_drivers_config.obj" \
 "./main_nortos.obj" \
+"./system_msp432e401y.obj" \
+"./uartstdio.obj" \
 "../MSP_EXP432E401Y_NoRTOS.cmd" \
 $(GEN_CMDS__FLAG) \
+-l"C:/ti/simplelink_msp432e4_sdk_4_20_00_12/source/third_party/CMSIS/DSP_Lib/lib/ccs/m4f/arm_cortexM4lf_math.a" \
 -l"ti/display/lib/display.aem4f" \
 -l"ti/grlib/lib/ccs/m4f/grlib.a" \
 -l"third_party/spiffs/lib/ccs/m4f/spiffs.a" \
@@ -149,7 +152,7 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 harmonic_wave_measurement.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"harmonic_wave_measurement.map" -i"C:/ti/simplelink_msp432e4_sdk_4_20_00_12/source" -i"C:/ti/simplelink_msp432e4_sdk_4_20_00_12/kernel/nortos" -i"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" --diag_suppress=10063 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="harmonic_wave_measurement_linkInfo.xml" --entry_point=resetISR --rom_model -o "harmonic_wave_measurement.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=none --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=DeviceFamily_MSP432E4 --define=__MSP432E401Y__ -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"harmonic_wave_measurement.map" -i"C:/ti/simplelink_msp432e4_sdk_4_20_00_12/source" -i"C:/ti/simplelink_msp432e4_sdk_4_20_00_12/kernel/nortos" -i"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" --diag_suppress=10063 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="harmonic_wave_measurement_linkInfo.xml" --entry_point=resetISR --rom_model -o "harmonic_wave_measurement.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
@@ -163,8 +166,8 @@ harmonic_wave_measurement.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "gpiointerrupt.obj" "syscfg\ti_drivers_config.obj" "main_nortos.obj" 
-	-$(RM) "gpiointerrupt.d" "syscfg\ti_drivers_config.d" "main_nortos.d" 
+	-$(RM) "gpiointerrupt.obj" "syscfg\ti_drivers_config.obj" "main_nortos.obj" "system_msp432e401y.obj" "uartstdio.obj" 
+	-$(RM) "gpiointerrupt.d" "syscfg\ti_drivers_config.d" "main_nortos.d" "system_msp432e401y.d" "uartstdio.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

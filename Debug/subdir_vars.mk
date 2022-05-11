@@ -14,7 +14,9 @@ SYSCFG_SRCS += \
 C_SRCS += \
 ../gpiointerrupt.c \
 ./syscfg/ti_drivers_config.c \
-../main_nortos.c 
+../main_nortos.c \
+../system_msp432e401y.c \
+../uartstdio.c 
 
 GEN_FILES += \
 ./syscfg/ti_drivers_config.c 
@@ -25,12 +27,16 @@ GEN_MISC_DIRS += \
 C_DEPS += \
 ./gpiointerrupt.d \
 ./syscfg/ti_drivers_config.d \
-./main_nortos.d 
+./main_nortos.d \
+./system_msp432e401y.d \
+./uartstdio.d 
 
 OBJS += \
 ./gpiointerrupt.obj \
 ./syscfg/ti_drivers_config.obj \
-./main_nortos.obj 
+./main_nortos.obj \
+./system_msp432e401y.obj \
+./uartstdio.obj 
 
 GEN_MISC_FILES += \
 ./syscfg/ti_drivers_config.h \
@@ -43,7 +49,9 @@ GEN_MISC_DIRS__QUOTED += \
 OBJS__QUOTED += \
 "gpiointerrupt.obj" \
 "syscfg\ti_drivers_config.obj" \
-"main_nortos.obj" 
+"main_nortos.obj" \
+"system_msp432e401y.obj" \
+"uartstdio.obj" 
 
 GEN_MISC_FILES__QUOTED += \
 "syscfg\ti_drivers_config.h" \
@@ -53,7 +61,9 @@ GEN_MISC_FILES__QUOTED += \
 C_DEPS__QUOTED += \
 "gpiointerrupt.d" \
 "syscfg\ti_drivers_config.d" \
-"main_nortos.d" 
+"main_nortos.d" \
+"system_msp432e401y.d" \
+"uartstdio.d" 
 
 GEN_FILES__QUOTED += \
 "syscfg\ti_drivers_config.c" 
@@ -61,7 +71,9 @@ GEN_FILES__QUOTED += \
 C_SRCS__QUOTED += \
 "../gpiointerrupt.c" \
 "./syscfg/ti_drivers_config.c" \
-"../main_nortos.c" 
+"../main_nortos.c" \
+"../system_msp432e401y.c" \
+"../uartstdio.c" 
 
 SYSCFG_SRCS__QUOTED += \
 "../gpiointerrupt.syscfg" 
