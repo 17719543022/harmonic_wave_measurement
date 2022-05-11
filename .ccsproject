@@ -13,6 +13,7 @@
 	<ignoreDefaultDeviceSettings value="true"/>
 	<ignoreDefaultCCSSettings value="true"/>
 	<templateProperties value="id=harmonic_wave_measurement.projectspec.harmonic_wave_measurement,buildProfile=release,isHybrid=true"/>
-	<origin value="C:\ti\simplelink_msp432e4_sdk_4_20_00_12\examples\nortos\MSP_EXP432E401Y\demos\cmsis_msp432e4_dsp_example\ccs\harmonic_wave_measurement.projectspec"/>
+	<origin value="C:\ti\simplelink_msp432e4_sdk_4_20_00_12\examples\nortos\MSP_EXP432E401Y\drivers\gpiointerrupt\ccs\harmonic_wave_measurement.projectspec"/>
 	<filesToOpen value=""/>
+	<isTargetManual value="false"/>
 </projectOptions>

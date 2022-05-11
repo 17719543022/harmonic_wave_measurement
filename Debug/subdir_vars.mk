@@ -6,36 +6,64 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CMD_SRCS += \
-../msp432e401y.cmd 
+../MSP_EXP432E401Y_NoRTOS.cmd 
+
+SYSCFG_SRCS += \
+../gpiointerrupt.syscfg 
 
 C_SRCS += \
-../cmsis_msp432e4_dsp_example.c \
-../system_msp432e401y.c \
-../uartstdio.c 
+../gpiointerrupt.c \
+./syscfg/ti_drivers_config.c \
+../main_nortos.c 
+
+GEN_FILES += \
+./syscfg/ti_drivers_config.c 
+
+GEN_MISC_DIRS += \
+./syscfg/ 
 
 C_DEPS += \
-./cmsis_msp432e4_dsp_example.d \
-./system_msp432e401y.d \
-./uartstdio.d 
+./gpiointerrupt.d \
+./syscfg/ti_drivers_config.d \
+./main_nortos.d 
 
 OBJS += \
-./cmsis_msp432e4_dsp_example.obj \
-./system_msp432e401y.obj \
-./uartstdio.obj 
+./gpiointerrupt.obj \
+./syscfg/ti_drivers_config.obj \
+./main_nortos.obj 
+
+GEN_MISC_FILES += \
+./syscfg/ti_drivers_config.h \
+./syscfg/ti_utils_build_linker.cmd.exp \
+./syscfg/syscfg_c.rov.xs 
+
+GEN_MISC_DIRS__QUOTED += \
+"syscfg\" 
 
 OBJS__QUOTED += \
-"cmsis_msp432e4_dsp_example.obj" \
-"system_msp432e401y.obj" \
-"uartstdio.obj" 
+"gpiointerrupt.obj" \
+"syscfg\ti_drivers_config.obj" \
+"main_nortos.obj" 
+
+GEN_MISC_FILES__QUOTED += \
+"syscfg\ti_drivers_config.h" \
+"syscfg\ti_utils_build_linker.cmd.exp" \
+"syscfg\syscfg_c.rov.xs" 
 
 C_DEPS__QUOTED += \
-"cmsis_msp432e4_dsp_example.d" \
-"system_msp432e401y.d" \
-"uartstdio.d" 
+"gpiointerrupt.d" \
+"syscfg\ti_drivers_config.d" \
+"main_nortos.d" 
+
+GEN_FILES__QUOTED += \
+"syscfg\ti_drivers_config.c" 
 
 C_SRCS__QUOTED += \
-"../cmsis_msp432e4_dsp_example.c" \
-"../system_msp432e401y.c" \
-"../uartstdio.c" 
+"../gpiointerrupt.c" \
+"./syscfg/ti_drivers_config.c" \
+"../main_nortos.c" 
+
+SYSCFG_SRCS__QUOTED += \
+"../gpiointerrupt.syscfg" 
 
 
